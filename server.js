@@ -86,4 +86,4 @@ const server=http.createServer(async(req,res)=>{
   json(res,404,{error:"not found"});
  }catch(e){console.error(e);json(res,502,{error:"MusicBrainzへの接続に失敗しました。サーバーを起動した状態で、もう一度試してください。"});}
 });
-server.listen(PORT,()=>console.log(`My neighborhood → http://localhost:${PORT}`));
+server.listen(PORT,"0.0.0.0",()=>console.log(`My neighborhood → http://localhost:${PORT}`));
